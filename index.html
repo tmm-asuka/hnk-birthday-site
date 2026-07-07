@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 20th Birthday</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="crown">
+👑
+</div>
+
+
+<h1>
+Happy 20th Birthday
+</h1>
+
+
+
+<h2>
+To my best friend
+</h2>
+
+
+<p class="message">
+
+20年間の思い出を<br>
+わたしたちからプレゼント💌
+
+</p>
+
+
+
+<div class="box">
+
+<p>Secret Code</p>
+
+<input id="code" type="text" placeholder="Enter">
+
+<button onclick="openMovie()">
+Open Present
+</button>
+
+</div>
+
+
+
+
+<div id="movie" class="hidden">
+
+
+<div id="names" class="names">
+
+<p class="to">
+ひなこへ
+</p>
+
+<p class="from">
+From
+</p>
+
+
+<h2>
+美優 & 珠実
+</h2>
+
+
+
+</div>
+
+
+
+<div id="videoArea" class="video-hidden">
+
+
+<h2>
+🎂 Thank you for everything
+</h2>
+
+
+<iframe
+id="youtubeVideo"
+width="560"
+height="315"
+src=""
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<script>
+
+function createSparkle(){
+
+let sparkle =
+document.createElement("div");
+
+
+sparkle.className="sparkle";
+
+
+sparkle.innerHTML="✦";
+
+
+sparkle.style.left =
+Math.random()*100 + "vw";
+
+
+sparkle.style.animationDuration =
+(2+Math.random()*3)+"s";
+
+
+document.body.appendChild(sparkle);
+
+
+
+setTimeout(()=>{
+
+sparkle.remove();
+
+},4000);
+
+
+}
+
+
+setInterval(createSparkle,300);
+
+
+function openMovie(){
+
+
+let code =
+document.getElementById("code").value;
+
+
+let videos = {
+    "2006":"aQm9a5Wq2aA",
+    "0422": "bHR5XaAkO84",
+    "AI":"4-1ZSHQon1A",
+    "浅黄": "EzFOgnQfQ4A",
+    "ミニトマト":"_Q0FXlBS0hQ",
+    "やまと幼稚園": "5_ScTM6wx4M",
+    "宇宙のふしぎ":"dWS5zSv4YKw",
+    "ミッション":"GwKZbMEp8SI",
+    "芋けんぴとそのまんまグレープ":"R4Q_5gFBWHk",
+    "マロン":"YwVuoUcYTw4",
+    "ハエトリソウ":"SMjY2l38_3k",
+    "八ヶ岳":"rxKmMGlalTU",
+    "市民プール":"Dk3KntYp9Cg",
+    "後楽園":"7vDcXT-U4Hg",
+    "チップとデール":"sVnk-zhZeHw",
+    "Mr.T":"1IyNlx0pRYE",
+    "つけもの":"9wuGFoe82aM",
+    "よみうりランド":"ItdpxzlIRDc",
+    "8":"H5P5CNAyUmE",
+    "鬼怒川温泉":"kcZvcOPXirc",
+    "0619":"vgWuVqhZqSc",
+    "親友":"kxuRtXZt-8Q"
+
+};
+
+
+if(videos[code]){
+
+
+document.getElementById("movie")
+.classList.remove("hidden");
+
+
+document.getElementById("youtubeVideo").src =
+"https://www.youtube.com/embed/" + videos[code];
+
+
+
+document.getElementById("names")
+.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+
+
+setTimeout(function(){
+
+
+document.getElementById("videoArea")
+.classList.remove("video-hidden");
+
+
+},3000);
+
+
+}else{
+
+
+alert("Secret code is wrong 🥺");
+
+
+}
+
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
