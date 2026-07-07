@@ -1,0 +1,406 @@
+body {
+
+margin:0;
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#fff8fc,#f7efff);
+
+font-family:
+"Yu Mincho",
+serif;
+
+overflow:auto;
+
+}
+
+
+
+.container {
+
+text-align:center;
+
+padding-top:60px;
+
+position:relative;
+
+}
+
+
+
+
+.crown {
+
+
+font-size:90px;
+
+
+filter:
+drop-shadow(0 8px 8px rgba(180,130,160,0.3));
+
+
+animation:
+float 2.5s ease-in-out infinite;
+
+}
+
+
+
+
+
+h1 {
+
+
+font-size:48px;
+
+
+letter-spacing:5px;
+
+
+color:#9b6b8a;
+
+
+text-shadow:
+0 2px 10px #ead1df;
+
+}
+
+
+
+
+h2 {
+
+color:#8b7a85;
+
+font-weight:normal;
+
+}
+
+
+
+
+.message {
+
+font-size:20px;
+
+line-height:2;
+
+color:#665;
+
+}
+
+
+
+
+.box {
+
+
+background:
+rgba(255,255,255,0.85);
+
+
+width:300px;
+
+
+margin:40px auto;
+
+
+padding:35px;
+
+
+border-radius:30px;
+
+
+box-shadow:
+0 15px 35px rgba(160,120,150,0.2);
+
+
+}
+
+
+
+
+
+input {
+
+
+padding:12px;
+
+
+border-radius:20px;
+
+
+border:1px solid #e4c7d8;
+
+
+}
+
+
+
+
+button {
+
+
+margin-top:15px;
+
+
+padding:13px 30px;
+
+
+border-radius:30px;
+
+
+border:none;
+
+
+background:
+linear-gradient(45deg,#d8a7c7,#bda7d8);
+
+
+color:white;
+
+
+font-size:16px;
+
+
+}
+
+
+
+
+video {
+
+
+width:90%;
+
+
+max-width:650px;
+
+
+border-radius:25px;
+
+
+}
+
+
+
+
+
+.hidden {
+
+display:none;
+
+}
+
+
+
+
+/* ティアラふわふわ */
+
+@keyframes float {
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+
+}
+
+
+
+
+/* キラキラ */
+
+.sparkle {
+
+
+position:fixed;
+
+
+top:-20px;
+
+
+font-size:25px;
+
+
+color:#d8b6cc;
+
+
+animation:
+fall 4s linear forwards;
+
+
+pointer-events:none;
+
+
+z-index:999;
+
+
+}
+
+
+
+
+
+@keyframes fall {
+
+
+0% {
+
+
+transform:
+translateY(0)
+rotate(0deg);
+
+
+opacity:1;
+
+
+}
+
+
+
+100% {
+
+
+transform:
+translateY(100vh)
+rotate(360deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+/* 名前の演出 */
+
+
+.names {
+
+
+min-height:40vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+animation:
+appear 2s ease;
+
+
+}
+
+
+.names h2 {
+
+
+font-size:40px;
+
+color:#9b6b8a;
+
+
+}
+
+
+
+.video-hidden {
+
+
+opacity:0;
+
+transition:
+opacity 1.5s;
+
+
+}
+
+
+
+.video-hidden:not(.video-hidden) {
+
+opacity:1;
+
+}
+
+
+
+
+
+@keyframes appear {
+
+
+from {
+
+
+opacity:0;
+
+
+transform:
+translateY(20px);
+
+
+}
+
+
+
+to {
+
+
+opacity:1;
+
+
+transform:
+translateY(0);
+
+
+}
+
+
+}
+
+/* 名前演出 */
+
+.from {
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:#aaa;
+
+}
+
+
+
+.to {
+
+font-size:42px;
+
+letter-spacing:5px;
+
+color:#9b6b8a;
+
+font-weight:bold;
+
+margin-top:20px;
+
+}
